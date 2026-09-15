@@ -1,14 +1,136 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Mi Portal de Juegos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lobo Games - Mi Colección</title>
+    <style>
+        /* Estilos generales y fondo oscuro */
+        body { 
+            margin: 0; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #121212; 
+            color: #ffffff; 
+        }
+        
+        /* Cabecera de la página */
+        header { 
+            text-align: center; 
+            padding: 60px 20px; 
+            background: linear-gradient(135deg, #1a0b2e, #0a0a0a); 
+            border-bottom: 2px solid #6c5ce7; 
+            box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
+        }
+        h1 { 
+            margin: 0; 
+            font-size: 3.5em; 
+            text-transform: uppercase; 
+            letter-spacing: 3px; 
+            text-shadow: 0 0 15px #6c5ce7; 
+        }
+        p.subtitle { color: #a29bfe; font-size: 1.2em; margin-top: 10px; }
+        
+        /* Contenedor de los juegos */
+        .games-container { 
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            gap: 40px; 
+            padding: 60px 20px; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+        
+        /* Diseño de la Tarjeta del Juego */
+        .game-card { 
+            background-color: #1e1e24; 
+            border-radius: 15px; 
+            overflow: hidden; 
+            width: 320px; 
+            transition: all 0.4s ease; 
+            border: 1px solid #333;
+        }
+        
+        /* Efecto al pasar el mouse por encima */
+        .game-card:hover { 
+            transform: translateY(-10px); 
+            box-shadow: 0 15px 35px rgba(108, 92, 231, 0.4); 
+            border-color: #6c5ce7;
+        }
+        
+        /* Espacio para la imagen (Por ahora son degradados de color) */
+        .game-image { 
+            height: 200px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            font-weight: bold; 
+            font-size: 1.8em; 
+            color: rgba(255,255,255,0.7);
+            letter-spacing: 2px;
+        }
+        
+        /* Zona del texto y el botón */
+        .game-info { padding: 25px; text-align: center; }
+        .game-info h2 { margin: 0 0 15px; font-size: 1.8em; }
+        .game-info p { color: #b2bec3; font-size: 1em; margin-bottom: 25px; line-height: 1.5; }
+        
+        /* Botón de Jugar */
+        .play-btn { 
+            display: inline-block; 
+            padding: 12px 30px; 
+            background-color: #6c5ce7; 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 30px; 
+            font-weight: bold; 
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background 0.3s, transform 0.2s; 
+        }
+        .play-btn:hover { 
+            background-color: #a29bfe; 
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
-    <h1>Bienvenido a mis Juegos</h1>
-    <p>Elige una aventura:</p>
-    
-    <!-- Este es el enlace que te llevará a la carpeta de tu juego -->
-    <a href="Stick_Fighters/index.html">Jugar Aventura de Texto</a>
-    
+
+    <header>
+        <h1>Lobo Games</h1>
+        <p class="subtitle">Mi colección de proyectos y juegos web</p>
+    </header>
+
+    <main class="games-container">
+        
+        <!-- Tarjeta: Stick Fighters -->
+        <div class="game-card">
+            <!-- Imagen provisional roja/naranja para el juego de peleas -->
+            <div class="game-image" style="background: linear-gradient(45deg, #ff416c, #ff4b2b);">
+                ACCIÓN
+            </div>
+            <div class="game-info">
+                <h2>Stick Fighters</h2>
+                <p>Un intenso juego de peleas. Demuestra quién tiene los mejores combos.</p>
+                <!-- Aquí está el enlace a tu carpeta -->
+                <a href="Stick_Fighters/index.html" class="play-btn">Jugar Ahora</a>
+            </div>
+        </div>
+
+        <!-- Tarjeta Placeholder: Futuro Proyecto -->
+        <div class="game-card">
+            <!-- Imagen provisional oscura/misteriosa -->
+            <div class="game-image" style="background: linear-gradient(45deg, #0f2027, #203a43, #2c5364);">
+                MISTERIO
+            </div>
+            <div class="game-info">
+                <h2>Historia Interactiva</h2>
+                <p>Una próxima aventura de texto basada en decisiones. ¿Qué camino elegirás?</p>
+                <a href="#" class="play-btn" style="background-color: #555;">Próximamente</a>
+            </div>
+        </div>
+
+    </main>
+
 </body>
 </html>
